@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="com.urucar.action" extends="struts-default">
+
+
+		<action name="GoHomeAction" class="com.urucar.action.GoHomeAction" method="execute">
+			<result name="success">home.jsp</result>
+		</action>
+
+		<action name="HomeAction" class="com.urucar.action.HomeAction" method="execute">
+			<result name="login">login.jsp</result>
+			<result name="success">buyItemConfirm.jsp</result>
+		</action>
+
+		<action name="LoginAction" class="com.urucar.action.LoginAction" method="execute">
+			<result name="success">welcome.jsp</result>
+			<result name="error">login.jsp</result>
+			<result name="admin">admin.jsp</result>
+		</action>
+
+		<action name="UserCreateAction" class="com.urucar.action.UserCreateAction" method="execute">
+			<result name="success">userCreate.jsp</result>
+			<result name="back">login.jsp</result>
+		</action>
+
+		<action name="UserCreateConfirmAction" class="com.urucar.action.UserCreateConfirmAction" method="execute">
+			<result name="success">userCreateConfirm.jsp</result>
+			<result name="error">userCreate.jsp</result>
+		</action>
+
+		<action name="UserCreateCompleteAction" class="com.urucar.action.UserCreateCompleteAction" method="execute">
+			<result name="success">userCreateComplete.jsp</result>
+		</action>
+
+		<action name="BuyItemAction" class="com.urucar.action.BuyItemAction" method="execute">
+			<result name="success">buyItemConfirm.jsp</result>
+			<result name="error">buyItem.jsp</result>
+		</action>
+
+
+		<action name="BuyItemConfirmAction" class="com.urucar.action.BuyItemConfirmAction" method="execute">
+			<result name="success">buyItemComplete.jsp</result>
+			<result name="back">buyItem.jsp</result>
+		</action>
+
+		<action name="MyPageAction" class="com.urucar.action.MyPageAction" method="execute">
+			<result name="success">myPage.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<action name="LogoutAction" class="com.urucar.action.LogoutAction" method="execute">
+			<result name="success">welcome.jsp</result>
+		</action>
+
+
+		<action name="ItemCreateAction" class="com.urucar.action.ItemCreateAction" method="execute">
+			<result name="success">itemCreate.jsp</result>
+		</action>
+
+		<action name="ItemCreateConfirmAction" class="com.urucar.action.ItemCreateConfirmAction" method="execute">
+			<result name="success">itemCreateConfirm.jsp</result>
+			<result name="error">itemCreate.jsp</result>
+		</action>
+
+		<action name="ItemCreateCompleteAction" class="com.urucar.action.ItemCreateCompleteAction" method="execute">
+			<result name="success">itemCreateComplete.jsp</result>
+			<result name="error">itemCreate.jsp</result>
+		</action>
+
+		<action name="ItemListAction" class="com.urucar.action.ItemListAction" method="execute">
+			<result name="success">carItemList.jsp</result>
+		</action>
+
+		<action name="UserListAction" class="com.urucar.action.UserListAction" method="execute">
+			<result name="success">userList.jsp</result>
+		</action>
+
+		<action name="ItemDetailsAction" class="com.urucar.action.ItemDetailsAction" method="execute">
+			<result name="success">itemDetails.jsp</result>
+		</action>
+
+		<action name="UserDetailsAction" class="com.urucar.action.UserDetailsAction" method="execute">
+			<result name="success">userDetails.jsp</result>
+		</action>
+
+
+		<action name = "emailer" class = "com.urucar.action.Emailer" method = "execute">
+			<result name = "success">emailsuccess.jsp</result>
+			<result name = "error">emailerror.jsp</result>
+		</action>
+
+
+
+	</package>
+</struts>
